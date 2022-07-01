@@ -34,7 +34,7 @@ jobs:
         run: |
           ls -l
           echo 'Docker login'
-          docker login -u $DOCKER_HUB -p $DOCKER_HUB_KEY
+          echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
           docker build . -t leoadams/python-helloworld:latest
           docker push leoadams/python-helloworld:latest
       # -
