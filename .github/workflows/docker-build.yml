@@ -26,7 +26,7 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v3
-      -
+      #-
         # name: Build
         # env:
         #   DOCKER_HUB: ${{ secrets.DOCKERHUB_USERNAME }}
